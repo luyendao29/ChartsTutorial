@@ -59,6 +59,70 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="3GO-XK-Ain">
+            <objects>
+                <viewController storyboardIdentifier="BarChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ld9-Kl-Ki7" customClass="BarChartViewController" customModule="ChartsTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TqD-sv-Bal">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-PW-fm8" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="52" width="398" height="398"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CeF-PW-fm8" secondAttribute="height" id="kEo-0B-BwH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CeF-PW-fm8" firstAttribute="leading" secondItem="5bP-0W-GSu" secondAttribute="leading" constant="8" id="Cp2-y7-b45"/>
+                            <constraint firstItem="5bP-0W-GSu" firstAttribute="trailing" secondItem="CeF-PW-fm8" secondAttribute="trailing" constant="8" id="Owi-YK-GpY"/>
+                            <constraint firstItem="CeF-PW-fm8" firstAttribute="top" secondItem="5bP-0W-GSu" secondAttribute="top" constant="8" id="bQ8-gQ-QPz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5bP-0W-GSu"/>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="CeF-PW-fm8" id="I7B-Ev-ql1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcN-el-JZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="796"/>
+        </scene>
+        <!--Line Chart View Controller-->
+        <scene sceneID="2Wt-fb-bcd">
+            <objects>
+                <viewController storyboardIdentifier="LineChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uGO-Wy-amL" customClass="LineChartViewController" customModule="ChartsTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U64-jX-DKa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8D2-de-Vei" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="52" width="398" height="398"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8D2-de-Vei" secondAttribute="height" id="0JT-la-r6v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VDv-HR-Wk1" firstAttribute="trailing" secondItem="8D2-de-Vei" secondAttribute="trailing" constant="8" id="8u7-ks-ZFp"/>
+                            <constraint firstItem="8D2-de-Vei" firstAttribute="top" secondItem="VDv-HR-Wk1" secondAttribute="top" constant="8" id="G7T-Zv-mrS"/>
+                            <constraint firstItem="8D2-de-Vei" firstAttribute="leading" secondItem="VDv-HR-Wk1" secondAttribute="leading" constant="8" id="KQn-nz-8Tj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VDv-HR-Wk1"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineChartView" destination="8D2-de-Vei" id="zRC-N1-G2M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5X-Mg-ZWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="796"/>
+        </scene>
         <!--Pie Chart View Controller-->
         <scene sceneID="llk-yu-s5D">
             <objects>

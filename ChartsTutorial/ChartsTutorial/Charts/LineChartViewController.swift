@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import Charts
 
 class LineChartViewController: UIViewController {
-
+    
+    @IBOutlet weak var lineChartView: LineChartView!
+    
+    let players = ["Ozil", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
+    let goals: [Double] = [6, 8, 26, 30, 8, 10]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        customizeChart(dataPoints: players, values: goals)
     }
     
+    func customizeChart(dataPoints: [String], values: [Double]) {
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<dataPoints.count {
+          let dataEntry = ChartDataEntry(x: values[i], y: Double(i))
+          dataEntries.append(dataEntry)
+        }
+        let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: nil)
+        let lineChartData = LineChartData(dataSet: lineChartDataSet)
+        lineChartView.data = lineChartData
+    }
 
     /*
     // MARK: - Navigation
