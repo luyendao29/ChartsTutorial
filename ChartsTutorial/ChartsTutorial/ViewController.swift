@@ -21,18 +21,24 @@ class ViewController: UIViewController {
   @IBAction func didTapOnPieChartButton(_ sender: Any) {
     
     guard let vc = ourStoryboard?.instantiateViewController(withIdentifier: "PieChartViewController") as? PieChartViewController else { return }
+    title = ""
+    vc.title = "Biểu đồ tròn"
     self.navigationController?.pushViewController(vc, animated: true)
   }
   
   @IBAction func didTapOnLineChartButton(_ sender: Any) {
     
     guard let vc = ourStoryboard?.instantiateViewController(withIdentifier: "LineChartViewController") as? LineChartViewController else { return }
+    title = ""
+    vc.title = "Biểu đồ đường"
     self.navigationController?.pushViewController(vc, animated: true)
   }
   
   @IBAction func didTapOnBarChartButton(_ sender: Any) {
     
     guard let vc = ourStoryboard?.instantiateViewController(withIdentifier: "BarChartViewController") as? BarChartViewController else { return }
+    title = ""
+    vc.title = "Biểu đồ cột"
     self.navigationController?.pushViewController(vc, animated: true)
   }
 }
